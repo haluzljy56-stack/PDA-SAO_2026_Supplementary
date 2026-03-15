@@ -1,2 +1,13 @@
 # PDA-SAO_2026_Supplementary
 Supplementary Material for ``Physics-Disentangled Adaptive Surrogate-Assisted Optimization for Microgrid Lifecycle Planning''
+
+This repository contains the supplementary materials, detailed datasets, and hyperparameter configurations for our paper submitted to *IEEE Transactions on Smart Grid*.
+
+## Repository Contents
+- **Supporting_Information.pdf**: Contains the complete mathematical formulations, objective function derivations, and detailed techno-economic parameters.
+- **/data**: Includes the historical 8760-hour meteorological and load data used in the case study.
+
+## Abstract
+	Life cycle assessment integration in microgrid planning is essential for comprehensively quantifying carbon emissions throughout the entire lifecycle, from equipment manufacturing to operational phases. However, the resulting bilevel optimization problem, which couples planning-level decisions with operational dispatch across an extended temporal horizon, presents considerable computational challenges. Traditional approaches typically employ surrogate models to encapsulate the lower-level operational dispatch subproblem, thereby simplifying the overall optimization. Nevertheless, these methods often fail to simultaneously capture continuous, high-magnitude economic costs alongside sparse, zero-inflated reliability penalties. 
+		To address these limitations, this paper proposes the Physics-Disentangled Adaptive Surrogate-Assisted Optimization (PDA-SAO) framework. Specifically, the framework constructs a physics-disentangled surrogate architecture that structurally isolates economic metrics from constraint violation penalties, fundamentally eliminating gradient dominance during model training. Furthermore, a stage-adaptive active learning strategy utilizes a dynamic weighting mechanism to smoothly shift the sampling focus from early-stage physical boundary exploration to later-stage global accuracy refinement. Finally, an online-corrected evolutionary optimization mechanism is integrated to effectively prevent extrapolation errors and guarantee the strict physical feasibility of the generated Pareto optimal solutions. 
+		Simulation results reveal that the PDA-SAO framework achieves a 125-fold computational acceleration over traditional nested solvers while maintaining a global prediction error below 5%. Critically, myopic planning that neglects embodied carbon underestimates total lifecycle emissions by up to 11.8%, validating the necessity of whole-process modeling to prevent ineffective decarbonization investments. Comprehensive ablation experiments and sensitivity analyses further substantiate the robustness of the proposed methodology.
